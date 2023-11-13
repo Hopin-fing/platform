@@ -3,27 +3,28 @@ package logging
 type LogLevel int
 
 const (
-	Trace LogLevel = iota
-	Debug
-	Information
-	Warning
-	Fatal
-	None
+    Trace LogLevel = iota
+    Debug
+    Information
+    Warning
+    Fatal
+    None 
 )
 
 type Logger interface {
-	Trace(string)
-	Tracef(string, ...interface{})
 
-	Debug(string)
-	Debugf(string, ...interface{})
+    Trace(string)
+    Tracef(string, ...interface{})
 
-	Info(string)
-	Infof(string, ...interface{})
+    Debug(string)
+    Debugf(string, ...interface{})
 
-	Warn(string)
-	Warnf(string, ...interface{})
+    Info(string)
+    Infof(string, ...interface{})
 
-	Panic(string)
-	Panicf(string, ...interface{})
+    Warn(string)
+    Warnf(string, ...interface{})
+
+    Panic(string)
+    Panicf(string, ...interface{})
 }
